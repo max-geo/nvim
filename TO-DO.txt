@@ -1,0 +1,6 @@
+-transparency keybind
+-look into persistent (?) and sessions
+
+
+
+
