@@ -12,6 +12,11 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 vim.keymap.set('n', '<leader>vt', ':vs | term<CR>i', { desc = 'Vertical split terminal' })
 
+vim.keymap.set('n', '<leader>cp', function()
+  vim.fn.setreg('+', vim.fn.expand '%:p')
+  print('Copied: ' .. vim.fn.expand '%:p')
+end, { desc = 'Copy file path' })
+
 vim.keymap.set({ 'n', 'x' }, 's', '<Nop>')
 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
